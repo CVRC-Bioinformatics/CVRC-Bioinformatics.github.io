@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Team | CVRC Bioinformatics</title>
-  <meta name="description" content="CVRC Bioinformatics team members" />
+  <title>Publications | CVRC Bioinformatics</title>
+  <meta name="description" content="CVRC Bioinformatics group publications" />
   <style>
     :root {
       --bg: #f6f2ff;
@@ -64,6 +64,7 @@
     .top-nav {
       display: flex;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
     .top-nav a {
@@ -88,7 +89,7 @@
       color: #fff;
     }
 
-    .team {
+    .publications {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -96,61 +97,47 @@
       box-shadow: var(--shadow);
     }
 
-    .team h1 {
-      margin: 0 0 6px;
+    .publications h1 {
+      margin: 0 0 8px;
       font-size: clamp(1.7rem, 4vw, 2.5rem);
       letter-spacing: -0.01em;
     }
 
-    .team-intro {
-      margin: 0 0 18px;
+    .publications p {
+      margin: 0 0 16px;
       color: var(--ink-soft);
     }
 
-    .team-grid {
+    .pub-list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      gap: 12px;
     }
 
-    .member-card {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 12px;
-      align-items: start;
+    .pub-item {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px;
+      border-radius: 12px;
+      padding: 14px;
     }
 
-    .member-card img {
-      width: 90px;
-      height: 90px;
-      border-radius: 10px;
-      object-fit: cover;
-      border: 1px solid var(--line);
-      background: #f2f2f2;
-    }
-
-    .member-card h2 {
-      margin: 0 0 4px;
+    .pub-item h2 {
+      margin: 0 0 6px;
       font-size: 1rem;
     }
 
-    .member-role {
+    .pub-meta {
       margin: 0 0 6px;
       color: var(--brand);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       font-weight: 600;
-      letter-spacing: 0.02em;
       text-transform: uppercase;
+      letter-spacing: 0.02em;
     }
 
-    .member-bio {
+    .pub-desc {
       margin: 0;
       color: var(--ink-soft);
-      font-size: 0.92rem;
+      font-size: 0.94rem;
     }
 
     footer {
@@ -170,19 +157,6 @@
         width: 100%;
         justify-content: flex-start;
       }
-
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .member-card {
-        grid-template-columns: 74px 1fr;
-      }
-
-      .member-card img {
-        width: 74px;
-        height: 74px;
-      }
     }
   </style>
 </head>
@@ -195,49 +169,32 @@
       </div>
       <nav class="top-nav" aria-label="Main">
         <a data-versioned-link="true" href="index.html">Home</a>
-        <a class="active" data-versioned-link="true" href="team.html">Team</a>
-        <a data-versioned-link="true" href="publications.html">Publications</a>
+        <a data-versioned-link="true" href="team.html">Team</a>
+        <a class="active" data-versioned-link="true" href="publications.html">Publications</a>
       </nav>
     </header>
 
-    <section class="team">
-      <h1>Team</h1>
-      <p class="team-intro">Placeholder profiles below. Replace names, photos, and bios with finalized team information.</p>
-      <div class="team-grid">
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/e8f1e3/355345?text=Member+1" alt="Placeholder photo for team member one" />
-          <div>
-            <h2>Team Member 1</h2>
-            <p class="member-role">Principal Investigator</p>
-            <p class="member-bio">Placeholder bio: leads cardiovascular systems biology strategy and cross-functional research programs.</p>
-          </div>
+    <section class="publications">
+      <h1>Publications</h1>
+      <p>This page will list publications from the CVRC Bioinformatics group. Placeholder entries are shown below.</p>
+
+      <div class="pub-list">
+        <article class="pub-item">
+          <h2>Placeholder Publication Title 1</h2>
+          <p class="pub-meta">Author A, Author B, Author C · Journal Name · 2026</p>
+          <p class="pub-desc">Placeholder summary for a methods or discovery paper from the group.</p>
         </article>
 
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/efe7c7/355345?text=Member+2" alt="Placeholder photo for team member two" />
-          <div>
-            <h2>Team Member 2</h2>
-            <p class="member-role">Bioinformatics Scientist</p>
-            <p class="member-bio">Placeholder bio: develops statistical workflows for transcriptomics, epigenomics, and integrative analyses.</p>
-          </div>
+        <article class="pub-item">
+          <h2>Placeholder Publication Title 2</h2>
+          <p class="pub-meta">Author D, Author E, Author F · Journal Name · 2025</p>
+          <p class="pub-desc">Placeholder summary for integrative omics analysis and translational findings.</p>
         </article>
 
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/e3edf7/355345?text=Member+3" alt="Placeholder photo for team member three" />
-          <div>
-            <h2>Team Member 3</h2>
-            <p class="member-role">Data Engineer</p>
-            <p class="member-bio">Placeholder bio: maintains scalable pipelines, metadata standards, and reproducible compute environments.</p>
-          </div>
-        </article>
-
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/f7e6df/355345?text=Member+4" alt="Placeholder photo for team member four" />
-          <div>
-            <h2>Team Member 4</h2>
-            <p class="member-role">Computational Analyst</p>
-            <p class="member-bio">Placeholder bio: supports downstream interpretation, visualization, and communication of project results.</p>
-          </div>
+        <article class="pub-item">
+          <h2>Placeholder Publication Title 3</h2>
+          <p class="pub-meta">Author G, Author H, Author I · Journal Name · 2024</p>
+          <p class="pub-desc">Placeholder summary for computational pipeline development and benchmarking.</p>
         </article>
       </div>
     </section>
