@@ -72,6 +72,11 @@
       transition: background .2s ease, color .2s ease;
     }
 
+    .top-nav a.active {
+      background: var(--brand);
+      color: #fff;
+    }
+
     .top-nav a:hover {
       background: var(--brand);
       color: #fff;
@@ -168,71 +173,6 @@
       font-size: .95rem;
     }
 
-    .team {
-      margin-top: 40px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .team h2 {
-      margin: 0 0 6px;
-      font-size: 1.35rem;
-    }
-
-    .team-intro {
-      margin: 0 0 16px;
-      color: var(--ink-soft);
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .member-card {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 12px;
-      align-items: start;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px;
-    }
-
-    .member-card img {
-      width: 90px;
-      height: 90px;
-      border-radius: 10px;
-      object-fit: cover;
-      border: 1px solid var(--line);
-      background: #f2f2f2;
-    }
-
-    .member-card h3 {
-      margin: 0 0 4px;
-      font-size: 1rem;
-    }
-
-    .member-role {
-      margin: 0 0 6px;
-      color: var(--brand);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    .member-bio {
-      margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.92rem;
-    }
-
     footer {
       margin-top: 36px;
       padding-top: 16px;
@@ -258,19 +198,6 @@
       .grid {
         grid-template-columns: 1fr;
       }
-
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .member-card {
-        grid-template-columns: 74px 1fr;
-      }
-
-      .member-card img {
-        width: 74px;
-        height: 74px;
-      }
     }
   </style>
 </head>
@@ -282,7 +209,8 @@
         <div class="mark">Organization Site</div>
       </div>
       <nav class="top-nav" aria-label="Main">
-        <a href="#team">Team</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="team.html">Team</a>
       </nav>
     </header>
 
@@ -320,45 +248,6 @@
         <h3>Reproducibility</h3>
         <p>Versioned pipelines, documented environments, and transparent methods from raw data to figures.</p>
       </article>
-    </section>
-
-    <section class="team" id="team">
-      <h2>Team</h2>
-      <p class="team-intro">Placeholder profiles below. Replace names, photos, and bios with your finalized team information.</p>
-      <div class="team-grid">
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/e8f1e3/355345?text=Member+1" alt="Placeholder photo for team member one" />
-          <div>
-            <h3>Team Member 1</h3>
-            <p class="member-role">Principal Investigator</p>
-            <p class="member-bio">Placeholder bio: leads cardiovascular systems biology strategy and cross-functional research programs.</p>
-          </div>
-        </article>
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/efe7c7/355345?text=Member+2" alt="Placeholder photo for team member two" />
-          <div>
-            <h3>Team Member 2</h3>
-            <p class="member-role">Bioinformatics Scientist</p>
-            <p class="member-bio">Placeholder bio: develops statistical workflows for transcriptomics, epigenomics, and integrative analyses.</p>
-          </div>
-        </article>
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/e3edf7/355345?text=Member+3" alt="Placeholder photo for team member three" />
-          <div>
-            <h3>Team Member 3</h3>
-            <p class="member-role">Data Engineer</p>
-            <p class="member-bio">Placeholder bio: maintains scalable pipelines, metadata standards, and reproducible compute environments.</p>
-          </div>
-        </article>
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/f7e6df/355345?text=Member+4" alt="Placeholder photo for team member four" />
-          <div>
-            <h3>Team Member 4</h3>
-            <p class="member-role">Computational Analyst</p>
-            <p class="member-bio">Placeholder bio: supports downstream interpretation, visualization, and communication of project results.</p>
-          </div>
-        </article>
-      </div>
     </section>
 
     <footer>

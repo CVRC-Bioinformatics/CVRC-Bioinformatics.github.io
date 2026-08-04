@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team | CVRC Bioinformatics</title>
+  <meta name="description" content="CVRC Bioinformatics team members" />
+  <style>
+    :root {
+      --bg: #f5f7ef;
+      --ink: #10231a;
+      --ink-soft: #355345;
+      --brand: #0d6b48;
+      --card: #ffffffcc;
+      --line: #b9cbbd;
+      --shadow: 0 20px 40px rgba(16, 35, 26, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 90% -10%, #e7f2da 0%, transparent 60%),
+        radial-gradient(900px 450px at 0% 100%, #efe7c7 0%, transparent 60%),
+        var(--bg);
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+    }
+
+    .brand-block {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .mark {
+      font-family: "IBM Plex Mono", monospace;
+      letter-spacing: 0.08em;
+      font-size: 0.86rem;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+    }
+
+    .top-nav {
+      display: flex;
+      gap: 8px;
+    }
+
+    .top-nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-family: "IBM Plex Mono", monospace;
+      letter-spacing: 0.03em;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .top-nav a.active {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .top-nav a:hover {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .team {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .team h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      letter-spacing: -0.01em;
+    }
+
+    .team-intro {
+      margin: 0 0 18px;
+      color: var(--ink-soft);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .member-card {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 12px;
+      align-items: start;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+    }
+
+    .member-card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: #f2f2f2;
+    }
+
+    .member-card h2 {
+      margin: 0 0 4px;
+      font-size: 1rem;
+    }
+
+    .member-role {
+      margin: 0 0 6px;
+      color: var(--brand);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .member-bio {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--ink-soft);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 860px) {
+      header {
+        align-items: flex-start;
+      }
+
+      .top-nav {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .member-card {
+        grid-template-columns: 74px 1fr;
+      }
+
+      .member-card img {
+        width: 74px;
+        height: 74px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand-block">
+        <div class="mark">CVRC Bioinformatics</div>
+        <div class="mark">Organization Site</div>
+      </div>
+      <nav class="top-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a class="active" href="team.html">Team</a>
+      </nav>
+    </header>
+
+    <section class="team">
+      <h1>Team</h1>
+      <p class="team-intro">Placeholder profiles below. Replace names, photos, and bios with finalized team information.</p>
+      <div class="team-grid">
+        <article class="member-card">
+          <img src="https://placehold.co/180x180/e8f1e3/355345?text=Member+1" alt="Placeholder photo for team member one" />
+          <div>
+            <h2>Team Member 1</h2>
+            <p class="member-role">Principal Investigator</p>
+            <p class="member-bio">Placeholder bio: leads cardiovascular systems biology strategy and cross-functional research programs.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="https://placehold.co/180x180/efe7c7/355345?text=Member+2" alt="Placeholder photo for team member two" />
+          <div>
+            <h2>Team Member 2</h2>
+            <p class="member-role">Bioinformatics Scientist</p>
+            <p class="member-bio">Placeholder bio: develops statistical workflows for transcriptomics, epigenomics, and integrative analyses.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="https://placehold.co/180x180/e3edf7/355345?text=Member+3" alt="Placeholder photo for team member three" />
+          <div>
+            <h2>Team Member 3</h2>
+            <p class="member-role">Data Engineer</p>
+            <p class="member-bio">Placeholder bio: maintains scalable pipelines, metadata standards, and reproducible compute environments.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="https://placehold.co/180x180/f7e6df/355345?text=Member+4" alt="Placeholder photo for team member four" />
+          <div>
+            <h2>Team Member 4</h2>
+            <p class="member-role">Computational Analyst</p>
+            <p class="member-bio">Placeholder bio: supports downstream interpretation, visualization, and communication of project results.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Maintained by CVRC Bioinformatics.
+    </footer>
+  </div>
+</body>
+</html>
