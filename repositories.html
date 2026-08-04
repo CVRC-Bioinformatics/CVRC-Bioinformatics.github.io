@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Team | CVRC Bioinformatics</title>
-  <meta name="description" content="CVRC Bioinformatics team members" />
+  <title>Repositories | CVRC Bioinformatics</title>
+  <meta name="description" content="CVRC Bioinformatics repositories and documentation" />
   <style>
     :root {
       --bg: #f6f2ff;
@@ -64,6 +64,7 @@
     .top-nav {
       display: flex;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
     .top-nav a {
@@ -88,7 +89,7 @@
       color: #fff;
     }
 
-    .team {
+    .repos {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -96,61 +97,54 @@
       box-shadow: var(--shadow);
     }
 
-    .team h1 {
-      margin: 0 0 6px;
+    .repos h1 {
+      margin: 0 0 8px;
       font-size: clamp(1.7rem, 4vw, 2.5rem);
       letter-spacing: -0.01em;
     }
 
-    .team-intro {
-      margin: 0 0 18px;
+    .repos p {
+      margin: 0 0 16px;
       color: var(--ink-soft);
     }
 
-    .team-grid {
+    .repo-list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      gap: 12px;
     }
 
-    .member-card {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 12px;
-      align-items: start;
+    .repo-item {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px;
+      border-radius: 12px;
+      padding: 14px;
     }
 
-    .member-card img {
-      width: 90px;
-      height: 90px;
-      border-radius: 10px;
-      object-fit: cover;
-      border: 1px solid var(--line);
-      background: #f2f2f2;
-    }
-
-    .member-card h2 {
-      margin: 0 0 4px;
+    .repo-item h2 {
+      margin: 0 0 6px;
       font-size: 1rem;
     }
 
-    .member-role {
-      margin: 0 0 6px;
+    .repo-item a {
       color: var(--brand);
-      font-size: 0.85rem;
+      text-decoration: none;
       font-weight: 600;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
     }
 
-    .member-bio {
+    .repo-item a:hover {
+      text-decoration: underline;
+    }
+
+    .repo-meta {
+      margin: 0 0 6px;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    .repo-desc {
       margin: 0;
       color: var(--ink-soft);
-      font-size: 0.92rem;
+      font-size: 0.94rem;
     }
 
     footer {
@@ -170,19 +164,6 @@
         width: 100%;
         justify-content: flex-start;
       }
-
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .member-card {
-        grid-template-columns: 74px 1fr;
-      }
-
-      .member-card img {
-        width: 74px;
-        height: 74px;
-      }
     }
   </style>
 </head>
@@ -195,50 +176,42 @@
       </div>
       <nav class="top-nav" aria-label="Main">
         <a data-versioned-link="true" href="index.html">Home</a>
-        <a class="active" data-versioned-link="true" href="team.html">Team</a>
+        <a data-versioned-link="true" href="team.html">Team</a>
         <a data-versioned-link="true" href="publications.html">Publications</a>
-        <a data-versioned-link="true" href="repositories.html">Repositories</a>
+        <a class="active" data-versioned-link="true" href="repositories.html">Repositories</a>
       </nav>
     </header>
 
-    <section class="team">
-      <h1>Team</h1>
-      <p class="team-intro">Placeholder profiles below. Replace names, photos, and bios with finalized team information.</p>
-      <div class="team-grid">
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/e8f1e3/355345?text=Member+1" alt="Placeholder photo for team member one" />
-          <div>
-            <h2>Team Member 1</h2>
-            <p class="member-role">Principal Investigator</p>
-            <p class="member-bio">Placeholder bio: leads cardiovascular systems biology strategy and cross-functional research programs.</p>
-          </div>
+    <section class="repos">
+      <h1>Repositories</h1>
+      <p>This page will list CVRC Bioinformatics repositories with links, documentation references, and short descriptions.</p>
+
+      <div class="repo-list">
+        <article class="repo-item">
+          <h2>Placeholder Repository 1</h2>
+          <p class="repo-meta">
+            Link: <a href="#">https://github.com/CVRC-Bioinformatics/repo-1</a>
+            <br />Docs: docs/README.md
+          </p>
+          <p class="repo-desc">Placeholder description: core analysis workflow with reproducible pipeline steps and outputs.</p>
         </article>
 
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/efe7c7/355345?text=Member+2" alt="Placeholder photo for team member two" />
-          <div>
-            <h2>Team Member 2</h2>
-            <p class="member-role">Bioinformatics Scientist</p>
-            <p class="member-bio">Placeholder bio: develops statistical workflows for transcriptomics, epigenomics, and integrative analyses.</p>
-          </div>
+        <article class="repo-item">
+          <h2>Placeholder Repository 2</h2>
+          <p class="repo-meta">
+            Link: <a href="#">https://github.com/CVRC-Bioinformatics/repo-2</a>
+            <br />Docs: docs/usage.md
+          </p>
+          <p class="repo-desc">Placeholder description: utility package for preprocessing and quality-control summaries.</p>
         </article>
 
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/e3edf7/355345?text=Member+3" alt="Placeholder photo for team member three" />
-          <div>
-            <h2>Team Member 3</h2>
-            <p class="member-role">Data Engineer</p>
-            <p class="member-bio">Placeholder bio: maintains scalable pipelines, metadata standards, and reproducible compute environments.</p>
-          </div>
-        </article>
-
-        <article class="member-card">
-          <img src="https://placehold.co/180x180/f7e6df/355345?text=Member+4" alt="Placeholder photo for team member four" />
-          <div>
-            <h2>Team Member 4</h2>
-            <p class="member-role">Computational Analyst</p>
-            <p class="member-bio">Placeholder bio: supports downstream interpretation, visualization, and communication of project results.</p>
-          </div>
+        <article class="repo-item">
+          <h2>Placeholder Repository 3</h2>
+          <p class="repo-meta">
+            Link: <a href="#">https://github.com/CVRC-Bioinformatics/repo-3</a>
+            <br />Docs: docs/methods.md
+          </p>
+          <p class="repo-desc">Placeholder description: visualization and reporting templates for collaborative projects.</p>
         </article>
       </div>
     </section>
