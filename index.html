@@ -88,10 +88,14 @@
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 28px;
-      align-items: start;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .hero > div {
+      max-width: 760px;
     }
 
     .hero h1 {
@@ -99,11 +103,11 @@
       font-size: clamp(2rem, 5vw, 3.7rem);
       line-height: 1.05;
       letter-spacing: -0.02em;
-      max-width: 14ch;
+      max-width: none;
     }
 
     .hero p {
-      margin: 0 0 22px;
+      margin: 0 auto 22px;
       color: var(--ink-soft);
       font-size: 1.05rem;
       max-width: 55ch;
@@ -176,6 +180,7 @@
       border-top: 1px solid var(--line);
       color: var(--ink-soft);
       font-size: .9rem;
+      text-align: center;
     }
 
     @media (max-width: 860px) {
@@ -189,7 +194,7 @@
       }
 
       .hero {
-        grid-template-columns: 1fr;
+        margin-bottom: 24px;
       }
 
       .grid {
@@ -221,6 +226,7 @@
           code, data pipelines, and reproducible analytics resources shared across the group.
         </p>
       </div>
+    </section>
 
     <footer>
       Maintained by CVRC Bioinformatics. <span class="release-version"></span>
