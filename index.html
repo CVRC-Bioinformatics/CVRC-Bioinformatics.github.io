@@ -2,15 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CVRC Bioinformatics</title>
+  <meta name="description" content="CVRC Bioinformatics organization site" />
   <style>
-    body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; margin: 0; padding: 3rem; line-height: 1.5; }
-    h1 { margin-top: 0; }
+    :root {
+      --bg: #f5f7ef;
+      --bg-accent: #dfead4;
+      --ink: #10231a;
+      --ink-soft: #355345;
+      --brand: #0d6b48;
+      --brand-2: #d49b3d;
+      --card: #ffffffcc;
+      --line: #b9cbbd;
+      --shadow: 0 20px 40px rgba(16, 35, 26, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 90% -10%, #e7f2da 0%, transparent 60%),
+        radial-gradient(900px 450px at 0% 100%, #efe7c7 0%, transparent 60%),
+        var(--bg);
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 42px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+    }
+
+    .mark {
+      font-family: "IBM Plex Mono", monospace;
+      letter-spacing: 0.08em;
+      font-size: 0.86rem;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 5vw, 3.7rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 14ch;
+    }
+
+    .hero p {
+      margin: 0 0 22px;
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+      max-width: 55ch;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .cta:hover { transform: translateY(-2px); background: #0a593c; }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(2px);
+    }
+
+    .panel h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .panel ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    .grid {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: .95rem;
+    }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--ink-soft);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>CVRC Bioinformatics</h1>
-  <p>Organization website is now live via GitHub Pages.</p>
+  <div class="wrap">
+    <header>
+      <div class="mark">CVRC Bioinformatics</div>
+      <div class="mark">Organization Site</div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Computational biology for cardiovascular discovery</h1>
+        <p>
+          Welcome to the CVRC Bioinformatics organization page. This site is the home base for
+          code, data pipelines, and reproducible analytics resources shared across the group.
+        </p>
+        <a class="cta" href="https://github.com/orgs/CVRC-Bioinformatics/repositories">Browse repositories</a>
+      </div>
+
+      <aside class="panel">
+        <h2>Now Online</h2>
+        <p>This GitHub Pages site is live and ready for project documentation.</p>
+        <ul>
+          <li>Publish project overviews and methods</li>
+          <li>Link active tools and repositories</li>
+          <li>Share team standards and onboarding docs</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Data Engineering</h3>
+        <p>Scalable workflows for ingest, QC, and harmonization of omics and clinical datasets.</p>
+      </article>
+      <article class="card">
+        <h3>Analytics</h3>
+        <p>Statistical modeling, machine learning, and interpretable methods for translational questions.</p>
+      </article>
+      <article class="card">
+        <h3>Reproducibility</h3>
+        <p>Versioned pipelines, documented environments, and transparent methods from raw data to figures.</p>
+      </article>
+    </section>
+
+    <footer>
+      Maintained by CVRC Bioinformatics. Update this page in the repository root as index.html.
+    </footer>
+  </div>
 </body>
 </html>
